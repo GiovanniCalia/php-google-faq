@@ -17,11 +17,14 @@
   ];
   ?>
 
+<h1>Prova 1</h1>
+
   <?php 
   foreach ($google as $googleclass => $value) {
     echo"<p>$googleclass: <ul>";
     foreach ($value as $element => $valuenumber){
       echo "<li>$element) $valuenumber</li>";
+    
     }
     echo "</ul></p>";
   }
@@ -29,19 +32,36 @@
 
   ?>
  
+<h1>Prova 2</h1>
 
 <?php
-/*
+
+
 for ($_i = 0; $_i < count($faq); $_i++){
   echo $faq[$_i];
 }
-*/
 
-echo join("<p></p>", $faq);
+for ($_i = 0; $_i < count($answers); $_i++){
+  echo $answers[$_i];
+}
+?>
+
+<h2>Prova alternativa</h2>
+
+<?php
+echo join("<h1></h1>", $faq);
 echo join("<p></p>", $answers);
 
 var_dump($faq);
 var_dump($answers);
+
+for ($_i = 0; $_i < 4; $_i++){
+  array_merge($faq[$_i], $answers[$_i]);
+  var_dump($result);
+  echo $faq[0];
+}
+
+
 ?>
   
 </body>
